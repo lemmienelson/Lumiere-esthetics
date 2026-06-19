@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumière Esthetics by Rosmery | Luxury Lash & Brow Studio · Cartagena</title>
+<meta name="description" content="Lumière Esthetics by Rosmery — a luxury beauty studio in Cartagena, Colombia offering lash lifts, lash extensions, brow lamination, ombré powder brows, tinting and waxing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0d0d0d;
+    --ink:#161616;
+    --panel:#1c1b19;
+    --gold:#c9a14a;
+    --gold-light:#e6cf94;
+    --cream:#f6f1e7;
+    --muted:#b9b4ab;
+    --line:rgba(201,161,74,.28);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--black);
+    color:var(--cream);
+    font-family:'Jost',sans-serif;
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .eyebrow{
+    font-family:'Jost',sans-serif;font-weight:500;font-size:.72rem;
+    letter-spacing:.34em;text-transform:uppercase;color:var(--gold);
+  }
+  .btn{
+    display:inline-block;font-family:'Jost',sans-serif;font-weight:500;
+    font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;
+    padding:16px 34px;border:1px solid var(--gold);color:var(--gold);
+    background:transparent;transition:.35s;cursor:pointer;
+  }
+  .btn:hover{background:var(--gold);color:var(--black)}
+  .btn-solid{background:var(--gold);color:var(--black);border-color:var(--gold)}
+  .btn-solid:hover{background:var(--gold-light);border-color:var(--gold-light)}
+
+  /* HEADER */
+  header{
+    position:fixed;top:0;left:0;width:100%;z-index:60;
+    transition:.4s;border-bottom:1px solid transparent;
+  }
+  header.scrolled{background:rgba(13,13,13,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.04em;color:var(--cream)}
+  .brand span{color:var(--gold)}
+  .menu{display:flex;gap:34px;align-items:center}
+  .menu a{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);transition:.3s}
+  .menu a:hover{color:var(--gold)}
+  .menu .btn{padding:12px 24px;color:var(--gold)}
+  .menu .btn:hover{color:var(--black)}
+  .burger{display:none;flex-direction:column;gap:6px;background:none;border:0;cursor:pointer}
+  .burger span{width:26px;height:1.5px;background:var(--cream);transition:.3s}
+
+  /* HERO */
+  .hero{
+    min-height:100vh;display:flex;align-items:center;position:relative;
+    background:linear-gradient(rgba(10,10,10,.55),rgba(10,10,10,.75)),
+      url('https://images.pexels.com/photos/256380/pexels-photo-256380.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover fixed;
+  }
+  .hero-inner{padding:140px 0 90px;max-width:720px}
+  .hero h1{font-size:clamp(3rem,8vw,6.2rem);margin:.2em 0 .15em;letter-spacing:.01em}
+  .hero h1 em{font-style:italic;color:var(--gold-light)}
+  .hero .sub{font-size:1.05rem;color:var(--muted);max-width:520px;margin-bottom:38px}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+
+  /* SECTION */
+  section{padding:110px 0}
+  .section-head{max-width:680px;margin-bottom:64px}
+  .section-head h2{font-size:clamp(2.2rem,5vw,3.4rem);margin:.18em 0 .3em}
+  .section-head p{color:var(--muted)}
+  .center{text-align:center;margin-left:auto;margin-right:auto}
+
+  /* ABOUT */
+  .about{background:var(--ink)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+  .about-img{position:relative;background:linear-gradient(135deg,#26221a,#3a2f1a 55%,#c9a14a)}
+  .about-img img{width:100%;height:560px;object-fit:cover;filter:grayscale(.15)}
+  .about-img::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--gold);z-index:-1}
+  .about-text h2{font-size:clamp(2rem,4.5vw,3rem);margin:.2em 0 .4em}
+  .about-text p{color:var(--muted);margin-bottom:18px}
+  .sig{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.7rem;color:var(--gold);margin-top:14px}
+
+  /* SERVICES */
+  .services{background:var(--black)}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .svc-card{
+    background:var(--panel);border:1px solid var(--line);
+    transition:.4s;overflow:hidden;display:flex;flex-direction:column;
+  }
+  .svc-card:hover{transform:translateY(-6px);border-color:var(--gold)}
+  .svc-img{height:230px;background:linear-gradient(135deg,#26221a,#3a2f1a 55%,#b9923f);overflow:hidden}
+  .svc-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15);transition:.5s}
+  .svc-card:hover .svc-img img{transform:scale(1.05);filter:grayscale(0)}
+  .svc-body{padding:30px 28px;display:flex;flex-direction:column;flex:1}
+  .svc-card h3{font-size:1.5rem;margin:0 0 4px}
+  .svc-card .en{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .svc-card p{color:var(--muted);font-size:.92rem;margin-bottom:18px}
+  .svc-card .price{margin-top:auto;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:500}
+
+  /* GALLERY */
+  .gallery{background:var(--ink)}
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .gal-grid a{display:block;background:linear-gradient(135deg,#26221a,#3a2f1a 55%,#b9923f);position:relative}
+  .gal-grid a::before{content:"✦";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(246,241,231,.25);font-size:2rem}
+  .gal-grid img{position:relative;width:100%;height:280px;object-fit:cover;filter:grayscale(.2);transition:.5s}
+  .gal-grid img:hover{filter:grayscale(0);transform:scale(1.02)}
+
+  /* TESTIMONIALS */
+  .testi{background:var(--black)}
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .quote{background:var(--panel);border:1px solid var(--line);padding:40px 34px}
+  .quote .stars{color:var(--gold);letter-spacing:.3em;margin-bottom:16px}
+  .quote p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;color:var(--cream);margin-bottom:20px}
+  .quote .who{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+
+  /* CTA / CONTACT */
+  .contact{
+    background:linear-gradient(rgba(10,10,10,.82),rgba(10,10,10,.9)),
+      url('https://images.pexels.com/photos/19242406/pexels-photo-19242406.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover;
+  }
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+  .info-row{display:flex;gap:16px;align-items:flex-start;margin-bottom:26px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+  .info-row .lbl{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+  .info-row .val{color:var(--cream);font-weight:400}
+  .info-row a.val:hover{color:var(--gold)}
+  form{display:grid;gap:16px}
+  input,textarea{
+    width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);
+    color:var(--cream);font-family:'Jost',sans-serif;font-size:.95rem;
+    padding:15px 18px;transition:.3s;
+  }
+  input:focus,textarea:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.07)}
+  input::placeholder,textarea::placeholder{color:var(--muted)}
+  .hours-card{background:rgba(20,19,17,.7);border:1px solid var(--line);padding:30px}
+  .hours-card h4{font-size:1.5rem;margin-bottom:14px;color:var(--gold-light)}
+  .hours-row{display:flex;justify-content:space-between;color:var(--muted);font-size:.92rem;padding:7px 0;border-bottom:1px dashed rgba(201,161,74,.18)}
+
+  /* FOOTER */
+  footer{background:var(--black);border-top:1px solid var(--line);padding:60px 0 30px}
+  .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;align-items:center}
+  .foot-grid .brand{font-size:1.7rem}
+  .socials{display:flex;gap:22px}
+  .socials a{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);transition:.3s}
+  .socials a:hover{color:var(--gold)}
+  .copy{text-align:center;color:var(--muted);font-size:.78rem;letter-spacing:.12em;margin-top:40px;padding-top:24px;border-top:1px solid rgba(201,161,74,.14)}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:.9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:960px){
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+    .svc-grid,.testi-grid{grid-template-columns:1fr 1fr}
+    .gal-grid{grid-template-columns:repeat(2,1fr)}
+    .about-img img{height:440px}
+    .hero{background-attachment:scroll}
+  }
+  @media(max-width:640px){
+    .menu{
+      position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--ink);
+      flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);
+      transition:.4s;border-left:1px solid var(--line);
+    }
+    .menu.open{transform:none}
+    .burger{display:flex;z-index:70}
+    .svc-grid,.testi-grid{grid-template-columns:1fr}
+    section{padding:80px 0}
+    .hero-actions .btn{flex:1;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="wrap nav">
+    <a href="#home" class="brand">Lumière <span>Esthetics</span></a>
+    <nav class="menu" id="menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn">Book Online</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap hero-inner reveal">
+    <p class="eyebrow">Luxury Beauty Studio · Cartagena, Colombia</p>
+    <h1>Where beauty<br>meets <em>excellence</em></h1>
+    <p class="sub">Lumière Esthetics by Rosmery is dedicated to crafting naturally beautiful, long-lasting lash and brow enhancements — so you look and feel your absolute best.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-solid">Book Appointment</a>
+      <a href="#services" class="btn">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-img reveal">
+      <img src="https://images.pexels.com/photos/5128228/pexels-photo-5128228.jpeg?auto=compress&cs=tinysrgb&w=900&h=1120&fit=crop" alt="Rosmery Guzman working with a client at Lumière Esthetics">
+    </div>
+    <div class="about-text reveal">
+      <p class="eyebrow">Your go-to lash &amp; brow artist</p>
+      <h2>Meet Rosmery Guzman</h2>
+      <p>Rosmery is the founder and owner of Lumière Esthetics, a private beauty studio in the heart of Cartagena. A certified esthetician specializing in lash extensions, lash lifting, brow lamination and ombré powder brows, she brings precision, warmth, and an eye for detail to every appointment.</p>
+      <p>Committed to continuous growth, Rosmery regularly attends advanced trainings to stay at the forefront of the latest techniques — ensuring every client receives the highest quality service and the longest-lasting results possible.</p>
+      <p>She is passionate about connecting with her clients and helping them feel beautiful inside and out.</p>
+      <div class="sig">— Rosmery Guzman</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow">What we offer</p>
+      <h2>Signature Services</h2>
+      <p>Customized lash and brow enhancements designed to flatter your natural features — booked by appointment only.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-img"><img src="https://images.pexels.com/photos/5128220/pexels-photo-5128220.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Lash lift and tint"></div>
+        <div class="svc-body">
+          <h3>Lifting de pestañas <em style="font-style:italic;color:var(--gold);font-size:1.1rem">+ tinte</em></h3>
+          <div class="en">Lash Lift &amp; Tint</div>
+          <p>A natural lift and tint that curls and darkens your own lashes for a wide-awake look that lasts for weeks.</p>
+          <span class="price">$95 – $110</span>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-img"><img src="https://images.pexels.com/photos/8558248/pexels-photo-8558248.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Brow lamination"></div>
+        <div class="svc-body">
+          <h3>Laminado de cejas</h3>
+          <div class="en">Brow Lamination</div>
+          <p>Smooths and sets unruly brows into a fuller, perfectly groomed shape that stays put for weeks.</p>
+          <span class="price">$70 – $110</span>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-img"><img src="https://images.pexels.com/photos/6135628/pexels-photo-6135628.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Brow design and tint"></div>
+        <div class="svc-body">
+          <h3>Diseño / tinte de cejas</h3>
+          <div class="en">Brow Design &amp; Tint</div>
+          <p>Custom shaping and tint to define, frame and enrich your brows for instant, balanced polish.</p>
+          <span class="price">$30 – $55</span>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-img"><img src="https://images.pexels.com/photos/4121712/pexels-photo-4121712.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Powder brows"></div>
+        <div class="svc-body">
+          <h3>Cejas efecto polvo</h3>
+          <div class="en">Powder Brows</div>
+          <p>Soft, shaded semi-permanent brows with a naturally powdered, beautifully filled-in finish.</p>
+          <span class="price">$400</span>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-img"><img src="https://images.pexels.com/photos/32039798/pexels-photo-32039798.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Powder brow touch-ups"></div>
+        <div class="svc-body">
+          <h3>Retoques efecto polvo</h3>
+          <div class="en">Powder Brow Touch-Ups</div>
+          <p>Keep your powder brows looking fresh with a periodic color and shape refresh.</p>
+          <span class="price">$150 – $300</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Our work</p>
+      <h2>Before &amp; After</h2>
+      <p>Explore a few of the stunning transformations from our wonderful clients.</p>
+    </div>
+    <div class="gal-grid reveal">
+      <a href="#gallery"><img src="https://images.pexels.com/photos/5128220/pexels-photo-5128220.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Applying eyelash extensions to a client"></a>
+      <a href="#gallery"><img src="https://images.pexels.com/photos/6135628/pexels-photo-6135628.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Threading a client's eyebrows"></a>
+      <a href="#gallery"><img src="https://images.pexels.com/photos/5128228/pexels-photo-5128228.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Lash treatment in the studio"></a>
+      <a href="#gallery"><img src="https://images.pexels.com/photos/8558248/pexels-photo-8558248.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Shaping a client's eyebrow"></a>
+      <a href="#gallery"><img src="https://images.pexels.com/photos/19242406/pexels-photo-19242406.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Client receiving a beauty treatment"></a>
+      <a href="#gallery"><img src="https://images.pexels.com/photos/19348316/pexels-photo-19348316.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Beautician working on a client"></a>
+      <a href="#gallery"><img src="https://images.pexels.com/photos/20593111/pexels-photo-20593111.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Beauty treatment in progress"></a>
+      <a href="#gallery"><img src="https://images.pexels.com/photos/5240248/pexels-photo-5240248.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Brow artist at work"></a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi" id="reviews">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Kind words</p>
+      <h2>What clients are saying</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="quote reveal"><div class="stars">★★★★★</div><p>"Rosmery is so talented and detail-oriented. My lashes have never looked better and lasted longer!"</p><div class="who">— Daniela M.</div></div>
+      <div class="quote reveal"><div class="stars">★★★★★</div><p>"The studio is gorgeous and so relaxing. My brows are absolutely perfect — I won't go anywhere else."</p><div class="who">— Valentina R.</div></div>
+      <div class="quote reveal"><div class="stars">★★★★★</div><p>"Professional, warm and so skilled. I always leave feeling beautiful and confident. Highly recommend!"</p><div class="who">— Carolina S.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Book Your Appointment</h2>
+      <p>By appointment only. Send a request below and Rosmery will be in touch to confirm your time.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="info-row">
+          <div><div class="lbl">Studio Location</div><div class="val">Carrera 17 A # 54 - 23<br>Cartagena, Colombia</div></div>
+        </div>
+        <div class="info-row">
+          <div><div class="lbl">Call or Text</div><a class="val" href="tel:+57">+57 (xxx) xxx-xxxx</a></div>
+        </div>
+        <div class="info-row">
+          <div><div class="lbl">Email</div><a class="val" href="mailto:hello@lumiereesthetics.co">hello@lumiereesthetics.co</a></div>
+        </div>
+        <div class="hours-card">
+          <h4>Business Hours</h4>
+          <div class="hours-row"><span>Monday – Friday</span><span>9:00 AM – 6:00 PM</span></div>
+          <div class="hours-row"><span>Saturday</span><span>9:00 AM – 3:00 PM</span></div>
+          <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <form onsubmit="event.preventDefault(); this.reset(); document.getElementById('thanks').style.display='block';">
+          <input type="text" placeholder="Full name" required>
+          <input type="email" placeholder="Email address" required>
+          <input type="tel" placeholder="Phone number">
+          <input type="text" placeholder="Service of interest">
+          <textarea rows="4" placeholder="Tell us about your appointment..."></textarea>
+          <button type="submit" class="btn btn-solid">Request Appointment</button>
+          <p id="thanks" style="display:none;color:var(--gold);font-size:.9rem">Thank you! Your request has been received.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <a href="#home" class="brand">Lumière <span>Esthetics</span></a>
+      <div class="socials">
+        <a href="https://www.instagram.com/rosmerygzman_" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">TikTok</a>
+        <a href="#" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <p class="copy">© 2026 Lumière Esthetics by Rosmery Guzman · Luxury Beauty Studio · Cartagena, Colombia</p>
+  </div>
+</footer>
+
+<script>
+  const header=document.getElementById('header');
+  window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>40));
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.querySelectorAll('img').forEach(img=>img.addEventListener('error',()=>img.style.opacity='0'));
+</script>
+</body>
+</html>
