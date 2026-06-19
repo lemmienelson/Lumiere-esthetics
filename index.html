@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lumière Esthetics by Rosmery | Luxury Lash & Brow Studio · Cartagena</title>
-<meta name="description" content="Lumière Esthetics by Rosmery — a luxury beauty studio in Cartagena, Colombia offering lash lifts, lash extensions, brow lamination, ombré powder brows, tinting and waxing.">
+<title>Lumière Esthetics by Rosmery | Estudio de Pestañas y Cejas · Cartagena</title>
+<meta name="description" content="Lumière Esthetics by Rosmery — estudio de belleza de lujo en Cartagena, Colombia. Lifting de pestañas, laminado de cejas, cejas efecto polvo, diseño y tinte.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -54,14 +54,22 @@
     transition:.4s;border-bottom:1px solid transparent;
   }
   header.scrolled{background:rgba(13,13,13,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
-  .brand{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.04em;color:var(--cream)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px;gap:18px}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.04em;color:var(--cream);white-space:nowrap}
   .brand span{color:var(--gold)}
   .menu{display:flex;gap:34px;align-items:center}
   .menu a{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);transition:.3s}
   .menu a:hover{color:var(--gold)}
   .menu .btn{padding:12px 24px;color:var(--gold)}
   .menu .btn:hover{color:var(--black)}
+  .nav-right{display:flex;align-items:center;gap:14px}
+  .lang-toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang-toggle button{
+    background:transparent;border:0;color:var(--muted);cursor:pointer;
+    font-family:'Jost',sans-serif;font-size:.66rem;font-weight:500;
+    letter-spacing:.16em;padding:7px 13px;transition:.3s;
+  }
+  .lang-toggle button.active{background:var(--gold);color:var(--black)}
   .burger{display:none;flex-direction:column;gap:6px;background:none;border:0;cursor:pointer}
   .burger span{width:26px;height:1.5px;background:var(--cream);transition:.3s}
 
@@ -172,13 +180,14 @@
     .menu{
       position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--ink);
       flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);
-      transition:.4s;border-left:1px solid var(--line);
+      transition:.4s;border-left:1px solid var(--line);z-index:65;
     }
     .menu.open{transform:none}
     .burger{display:flex;z-index:70}
     .svc-grid,.testi-grid{grid-template-columns:1fr}
     section{padding:80px 0}
     .hero-actions .btn{flex:1;text-align:center}
+    .brand{font-size:1.25rem}
   }
 </style>
 </head>
@@ -188,26 +197,32 @@
   <div class="wrap nav">
     <a href="#home" class="brand">Lumière <span>Esthetics</span></a>
     <nav class="menu" id="menu">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-      <a href="#contact" class="btn">Book Online</a>
+      <a href="#home" data-es="Inicio" data-en="Home">Inicio</a>
+      <a href="#about" data-es="Nosotros" data-en="About">Nosotros</a>
+      <a href="#services" data-es="Servicios" data-en="Services">Servicios</a>
+      <a href="#gallery" data-es="Galería" data-en="Gallery">Galería</a>
+      <a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a>
+      <a href="#contact" class="btn" data-es="Reservar" data-en="Book Online">Reservar</a>
     </nav>
-    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-right">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button id="btn-es" type="button" onclick="setLang('es')">ES</button>
+        <button id="btn-en" type="button" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="wrap hero-inner reveal">
-    <p class="eyebrow">Luxury Beauty Studio · Cartagena, Colombia</p>
-    <h1>Where beauty<br>meets <em>excellence</em></h1>
-    <p class="sub">Lumière Esthetics by Rosmery is dedicated to crafting naturally beautiful, long-lasting lash and brow enhancements — so you look and feel your absolute best.</p>
+    <p class="eyebrow" data-es="Estudio de Belleza de Lujo · Cartagena, Colombia" data-en="Luxury Beauty Studio · Cartagena, Colombia">Estudio de Belleza de Lujo · Cartagena, Colombia</p>
+    <h1 data-es="Donde la belleza<br>encuentra la <em>excelencia</em>" data-en="Where beauty<br>meets <em>excellence</em>">Donde la belleza<br>encuentra la <em>excelencia</em></h1>
+    <p class="sub" data-es="Lumière Esthetics by Rosmery se dedica a crear realces de pestañas y cejas naturalmente hermosos y duraderos, para que luzcas y te sientas increíble." data-en="Lumière Esthetics by Rosmery is dedicated to crafting naturally beautiful, long-lasting lash and brow enhancements — so you look and feel your absolute best.">Lumière Esthetics by Rosmery se dedica a crear realces de pestañas y cejas naturalmente hermosos y duraderos, para que luzcas y te sientas increíble.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn btn-solid">Book Appointment</a>
-      <a href="#services" class="btn">View Services</a>
+      <a href="#contact" class="btn btn-solid" data-es="Reservar Cita" data-en="Book Appointment">Reservar Cita</a>
+      <a href="#services" class="btn" data-es="Ver Servicios" data-en="View Services">Ver Servicios</a>
     </div>
   </div>
 </section>
@@ -216,15 +231,15 @@
 <section class="about" id="about">
   <div class="wrap about-grid">
     <div class="about-img reveal">
-      <img src="https://images.pexels.com/photos/5128228/pexels-photo-5128228.jpeg?auto=compress&cs=tinysrgb&w=900&h=1120&fit=crop" alt="Rosmery Guzman working with a client at Lumière Esthetics">
+      <img src="https://images.pexels.com/photos/5128228/pexels-photo-5128228.jpeg?auto=compress&cs=tinysrgb&w=900&h=1120&fit=crop" alt="Rosmery Guzmán trabajando con una clienta en Lumière Esthetics">
     </div>
     <div class="about-text reveal">
-      <p class="eyebrow">Your go-to lash &amp; brow artist</p>
-      <h2>Meet Rosmery Guzman</h2>
-      <p>Rosmery is the founder and owner of Lumière Esthetics, a private beauty studio in the heart of Cartagena. A certified esthetician specializing in lash extensions, lash lifting, brow lamination and ombré powder brows, she brings precision, warmth, and an eye for detail to every appointment.</p>
-      <p>Committed to continuous growth, Rosmery regularly attends advanced trainings to stay at the forefront of the latest techniques — ensuring every client receives the highest quality service and the longest-lasting results possible.</p>
-      <p>She is passionate about connecting with her clients and helping them feel beautiful inside and out.</p>
-      <div class="sig">— Rosmery Guzman</div>
+      <p class="eyebrow" data-es="Tu especialista en pestañas y cejas" data-en="Your go-to lash &amp; brow artist">Tu especialista en pestañas y cejas</p>
+      <h2 data-es="Conoce a Rosmery Guzmán" data-en="Meet Rosmery Guzmán">Conoce a Rosmery Guzmán</h2>
+      <p data-es="Rosmery es la fundadora y propietaria de Lumière Esthetics, un estudio de belleza privado en el corazón de Cartagena. Esteticista certificada especializada en extensiones de pestañas, lifting de pestañas, laminado de cejas y cejas efecto polvo, aporta precisión, calidez y atención al detalle en cada cita." data-en="Rosmery is the founder and owner of Lumière Esthetics, a private beauty studio in the heart of Cartagena. A certified esthetician specializing in lash extensions, lash lifting, brow lamination and powder brows, she brings precision, warmth, and an eye for detail to every appointment.">Rosmery es la fundadora y propietaria de Lumière Esthetics, un estudio de belleza privado en el corazón de Cartagena. Esteticista certificada especializada en extensiones de pestañas, lifting de pestañas, laminado de cejas y cejas efecto polvo, aporta precisión, calidez y atención al detalle en cada cita.</p>
+      <p data-es="Comprometida con el crecimiento continuo, Rosmery asiste regularmente a capacitaciones avanzadas para mantenerse a la vanguardia de las últimas técnicas, garantizando que cada clienta reciba un servicio de la más alta calidad y los resultados más duraderos posibles." data-en="Committed to continuous growth, Rosmery regularly attends advanced trainings to stay at the forefront of the latest techniques — ensuring every client receives the highest quality service and the longest-lasting results possible.">Comprometida con el crecimiento continuo, Rosmery asiste regularmente a capacitaciones avanzadas para mantenerse a la vanguardia de las últimas técnicas, garantizando que cada clienta reciba un servicio de la más alta calidad y los resultados más duraderos posibles.</p>
+      <p data-es="Le apasiona conectar con sus clientas y ayudarlas a sentirse hermosas por dentro y por fuera." data-en="She is passionate about connecting with her clients and helping them feel beautiful inside and out.">Le apasiona conectar con sus clientas y ayudarlas a sentirse hermosas por dentro y por fuera.</p>
+      <div class="sig">— Rosmery Guzmán</div>
     </div>
   </div>
 </section>
@@ -233,53 +248,53 @@
 <section class="services" id="services">
   <div class="wrap">
     <div class="section-head center reveal">
-      <p class="eyebrow">What we offer</p>
-      <h2>Signature Services</h2>
-      <p>Customized lash and brow enhancements designed to flatter your natural features — booked by appointment only.</p>
+      <p class="eyebrow" data-es="Lo que ofrecemos" data-en="What we offer">Lo que ofrecemos</p>
+      <h2 data-es="Servicios Exclusivos" data-en="Signature Services">Servicios Exclusivos</h2>
+      <p data-es="Realces de pestañas y cejas personalizados, diseñados para resaltar tus facciones naturales — solo con cita previa." data-en="Customized lash and brow enhancements designed to flatter your natural features — by appointment only.">Realces de pestañas y cejas personalizados, diseñados para resaltar tus facciones naturales — solo con cita previa.</p>
     </div>
     <div class="svc-grid">
       <div class="svc-card reveal">
-        <div class="svc-img"><img src="https://images.pexels.com/photos/5128220/pexels-photo-5128220.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Lash lift and tint"></div>
+        <div class="svc-img"><img src="https://images.pexels.com/photos/5128220/pexels-photo-5128220.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Lifting de pestañas y tinte"></div>
         <div class="svc-body">
-          <h3>Lifting de pestañas <em style="font-style:italic;color:var(--gold);font-size:1.1rem">+ tinte</em></h3>
-          <div class="en">Lash Lift &amp; Tint</div>
-          <p>A natural lift and tint that curls and darkens your own lashes for a wide-awake look that lasts for weeks.</p>
+          <h3 data-es="Lifting de pestañas + tinte" data-en="Lash Lift &amp; Tint">Lifting de pestañas + tinte</h3>
+          <div class="en" data-es="Lash Lift &amp; Tint" data-en="Lifting de pestañas + tinte">Lash Lift &amp; Tint</div>
+          <p data-es="Un lifting y tinte natural que riza y oscurece tus propias pestañas para una mirada despierta que dura semanas." data-en="A natural lift and tint that curls and darkens your own lashes for a wide-awake look that lasts for weeks.">Un lifting y tinte natural que riza y oscurece tus propias pestañas para una mirada despierta que dura semanas.</p>
           <span class="price">$95 – $110</span>
         </div>
       </div>
       <div class="svc-card reveal">
-        <div class="svc-img"><img src="https://images.pexels.com/photos/8558248/pexels-photo-8558248.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Brow lamination"></div>
+        <div class="svc-img"><img src="https://images.pexels.com/photos/8558248/pexels-photo-8558248.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Laminado de cejas"></div>
         <div class="svc-body">
-          <h3>Laminado de cejas</h3>
-          <div class="en">Brow Lamination</div>
-          <p>Smooths and sets unruly brows into a fuller, perfectly groomed shape that stays put for weeks.</p>
+          <h3 data-es="Laminado de cejas" data-en="Brow Lamination">Laminado de cejas</h3>
+          <div class="en" data-es="Brow Lamination" data-en="Laminado de cejas">Brow Lamination</div>
+          <p data-es="Alisa y fija las cejas rebeldes en una forma más llena y perfectamente peinada que se mantiene por semanas." data-en="Smooths and sets unruly brows into a fuller, perfectly groomed shape that stays put for weeks.">Alisa y fija las cejas rebeldes en una forma más llena y perfectamente peinada que se mantiene por semanas.</p>
           <span class="price">$70 – $110</span>
         </div>
       </div>
       <div class="svc-card reveal">
-        <div class="svc-img"><img src="https://images.pexels.com/photos/6135628/pexels-photo-6135628.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Brow design and tint"></div>
+        <div class="svc-img"><img src="https://images.pexels.com/photos/6135628/pexels-photo-6135628.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Diseño y tinte de cejas"></div>
         <div class="svc-body">
-          <h3>Diseño / tinte de cejas</h3>
-          <div class="en">Brow Design &amp; Tint</div>
-          <p>Custom shaping and tint to define, frame and enrich your brows for instant, balanced polish.</p>
+          <h3 data-es="Diseño / tinte de cejas" data-en="Brow Design &amp; Tint">Diseño / tinte de cejas</h3>
+          <div class="en" data-es="Brow Design &amp; Tint" data-en="Diseño / tinte de cejas">Brow Design &amp; Tint</div>
+          <p data-es="Diseño y tinte personalizado para definir, enmarcar y enriquecer tus cejas con un acabado equilibrado al instante." data-en="Custom shaping and tint to define, frame and enrich your brows for instant, balanced polish.">Diseño y tinte personalizado para definir, enmarcar y enriquecer tus cejas con un acabado equilibrado al instante.</p>
           <span class="price">$30 – $55</span>
         </div>
       </div>
       <div class="svc-card reveal">
-        <div class="svc-img"><img src="https://images.pexels.com/photos/4121712/pexels-photo-4121712.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Powder brows"></div>
+        <div class="svc-img"><img src="https://images.pexels.com/photos/4121712/pexels-photo-4121712.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Cejas efecto polvo"></div>
         <div class="svc-body">
-          <h3>Cejas efecto polvo</h3>
-          <div class="en">Powder Brows</div>
-          <p>Soft, shaded semi-permanent brows with a naturally powdered, beautifully filled-in finish.</p>
+          <h3 data-es="Cejas efecto polvo" data-en="Powder Brows">Cejas efecto polvo</h3>
+          <div class="en" data-es="Powder Brows" data-en="Cejas efecto polvo">Powder Brows</div>
+          <p data-es="Cejas semipermanentes suaves y sombreadas con un acabado naturalmente empolvado y bellamente difuminado." data-en="Soft, shaded semi-permanent brows with a naturally powdered, beautifully filled-in finish.">Cejas semipermanentes suaves y sombreadas con un acabado naturalmente empolvado y bellamente difuminado.</p>
           <span class="price">$400</span>
         </div>
       </div>
       <div class="svc-card reveal">
-        <div class="svc-img"><img src="https://images.pexels.com/photos/32039798/pexels-photo-32039798.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Powder brow touch-ups"></div>
+        <div class="svc-img"><img src="https://images.pexels.com/photos/32039798/pexels-photo-32039798.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Retoques de cejas efecto polvo"></div>
         <div class="svc-body">
-          <h3>Retoques efecto polvo</h3>
-          <div class="en">Powder Brow Touch-Ups</div>
-          <p>Keep your powder brows looking fresh with a periodic color and shape refresh.</p>
+          <h3 data-es="Retoques efecto polvo" data-en="Powder Brow Touch-Ups">Retoques efecto polvo</h3>
+          <div class="en" data-es="Powder Brow Touch-Ups" data-en="Retoques efecto polvo">Powder Brow Touch-Ups</div>
+          <p data-es="Mantén tus cejas efecto polvo siempre frescas con un retoque periódico de color y forma." data-en="Keep your powder brows looking fresh with a periodic color and shape refresh.">Mantén tus cejas efecto polvo siempre frescas con un retoque periódico de color y forma.</p>
           <span class="price">$150 – $300</span>
         </div>
       </div>
@@ -291,19 +306,19 @@
 <section class="gallery" id="gallery">
   <div class="wrap">
     <div class="section-head center reveal">
-      <p class="eyebrow">Our work</p>
-      <h2>Before &amp; After</h2>
-      <p>Explore a few of the stunning transformations from our wonderful clients.</p>
+      <p class="eyebrow" data-es="Nuestro trabajo" data-en="Our work">Nuestro trabajo</p>
+      <h2 data-es="Antes y Después" data-en="Before &amp; After">Antes y Después</h2>
+      <p data-es="Descubre algunas de las hermosas transformaciones de nuestras maravillosas clientas." data-en="Explore a few of the stunning transformations from our wonderful clients.">Descubre algunas de las hermosas transformaciones de nuestras maravillosas clientas.</p>
     </div>
     <div class="gal-grid reveal">
-      <a href="#gallery"><img src="https://images.pexels.com/photos/5128220/pexels-photo-5128220.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Applying eyelash extensions to a client"></a>
-      <a href="#gallery"><img src="https://images.pexels.com/photos/6135628/pexels-photo-6135628.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Threading a client's eyebrows"></a>
-      <a href="#gallery"><img src="https://images.pexels.com/photos/5128228/pexels-photo-5128228.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Lash treatment in the studio"></a>
-      <a href="#gallery"><img src="https://images.pexels.com/photos/8558248/pexels-photo-8558248.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Shaping a client's eyebrow"></a>
-      <a href="#gallery"><img src="https://images.pexels.com/photos/19242406/pexels-photo-19242406.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Client receiving a beauty treatment"></a>
-      <a href="#gallery"><img src="https://images.pexels.com/photos/19348316/pexels-photo-19348316.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Beautician working on a client"></a>
-      <a href="#gallery"><img src="https://images.pexels.com/photos/20593111/pexels-photo-20593111.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Beauty treatment in progress"></a>
-      <a href="#gallery"><img src="https://images.pexels.com/photos/5240248/pexels-photo-5240248.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Brow artist at work"></a>
+      <a href="#gallery"><img src="https://images.pexels.com/photos/5128220/pexels-photo-5128220.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Aplicación de extensiones de pestañas"></a>
+      <a href="#gallery"><img src="https://images.pexels.com/photos/6135628/pexels-photo-6135628.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Diseño de cejas"></a>
+      <a href="#gallery"><img src="https://images.pexels.com/photos/5128228/pexels-photo-5128228.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Tratamiento de pestañas en el estudio"></a>
+      <a href="#gallery"><img src="https://images.pexels.com/photos/8558248/pexels-photo-8558248.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Perfilado de cejas"></a>
+      <a href="#gallery"><img src="https://images.pexels.com/photos/19242406/pexels-photo-19242406.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Clienta recibiendo un tratamiento de belleza"></a>
+      <a href="#gallery"><img src="https://images.pexels.com/photos/19348316/pexels-photo-19348316.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Esteticista trabajando con una clienta"></a>
+      <a href="#gallery"><img src="https://images.pexels.com/photos/20593111/pexels-photo-20593111.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Tratamiento de belleza en proceso"></a>
+      <a href="#gallery"><img src="https://images.pexels.com/photos/5240248/pexels-photo-5240248.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Especialista de cejas trabajando"></a>
     </div>
   </div>
 </section>
@@ -312,13 +327,13 @@
 <section class="testi" id="reviews">
   <div class="wrap">
     <div class="section-head center reveal">
-      <p class="eyebrow">Kind words</p>
-      <h2>What clients are saying</h2>
+      <p class="eyebrow" data-es="Testimonios" data-en="Kind words">Testimonios</p>
+      <h2 data-es="Lo que dicen nuestras clientas" data-en="What clients are saying">Lo que dicen nuestras clientas</h2>
     </div>
     <div class="testi-grid">
-      <div class="quote reveal"><div class="stars">★★★★★</div><p>"Rosmery is so talented and detail-oriented. My lashes have never looked better and lasted longer!"</p><div class="who">— Daniela M.</div></div>
-      <div class="quote reveal"><div class="stars">★★★★★</div><p>"The studio is gorgeous and so relaxing. My brows are absolutely perfect — I won't go anywhere else."</p><div class="who">— Valentina R.</div></div>
-      <div class="quote reveal"><div class="stars">★★★★★</div><p>"Professional, warm and so skilled. I always leave feeling beautiful and confident. Highly recommend!"</p><div class="who">— Carolina S.</div></div>
+      <div class="quote reveal"><div class="stars">★★★★★</div><p data-es="“Rosmery es muy talentosa y detallista. ¡Mis pestañas nunca se han visto mejor ni han durado tanto!”" data-en="“Rosmery is so talented and detail-oriented. My lashes have never looked better and lasted longer!”">“Rosmery es muy talentosa y detallista. ¡Mis pestañas nunca se han visto mejor ni han durado tanto!”</p><div class="who">— Daniela M.</div></div>
+      <div class="quote reveal"><div class="stars">★★★★★</div><p data-es="“El estudio es precioso y muy relajante. Mis cejas quedaron perfectas — no iré a ningún otro lugar.”" data-en="“The studio is gorgeous and so relaxing. My brows are absolutely perfect — I won’t go anywhere else.”">“El estudio es precioso y muy relajante. Mis cejas quedaron perfectas — no iré a ningún otro lugar.”</p><div class="who">— Valentina R.</div></div>
+      <div class="quote reveal"><div class="stars">★★★★★</div><p data-es="“Profesional, cálida y muy hábil. Siempre salgo sintiéndome hermosa y segura. ¡Muy recomendada!”" data-en="“Professional, warm and so skilled. I always leave feeling beautiful and confident. Highly recommend!”">“Profesional, cálida y muy hábil. Siempre salgo sintiéndome hermosa y segura. ¡Muy recomendada!”</p><div class="who">— Carolina S.</div></div>
     </div>
   </div>
 </section>
@@ -327,37 +342,37 @@
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="section-head center reveal">
-      <p class="eyebrow">Get in touch</p>
-      <h2>Book Your Appointment</h2>
-      <p>By appointment only. Send a request below and Rosmery will be in touch to confirm your time.</p>
+      <p class="eyebrow" data-es="Contáctanos" data-en="Get in touch">Contáctanos</p>
+      <h2 data-es="Reserva tu Cita" data-en="Book Your Appointment">Reserva tu Cita</h2>
+      <p data-es="Solo con cita previa. Envía una solicitud y Rosmery se pondrá en contacto para confirmar tu horario." data-en="By appointment only. Send a request below and Rosmery will be in touch to confirm your time.">Solo con cita previa. Envía una solicitud y Rosmery se pondrá en contacto para confirmar tu horario.</p>
     </div>
     <div class="contact-grid">
       <div class="reveal">
         <div class="info-row">
-          <div><div class="lbl">Studio Location</div><div class="val">Carrera 17 A # 54 - 23<br>Cartagena, Colombia</div></div>
+          <div><div class="lbl" data-es="Ubicación del Estudio" data-en="Studio Location">Ubicación del Estudio</div><div class="val">Carrera 17 A # 54 - 23<br>Cartagena, Colombia</div></div>
         </div>
         <div class="info-row">
-          <div><div class="lbl">Call or Text</div><a class="val" href="tel:+57">+57 (xxx) xxx-xxxx</a></div>
+          <div><div class="lbl" data-es="Llama o Escribe" data-en="Call or Text">Llama o Escribe</div><a class="val" href="tel:+57">+57 (xxx) xxx-xxxx</a></div>
         </div>
         <div class="info-row">
-          <div><div class="lbl">Email</div><a class="val" href="mailto:hello@lumiereesthetics.co">hello@lumiereesthetics.co</a></div>
+          <div><div class="lbl" data-es="Correo" data-en="Email">Correo</div><a class="val" href="mailto:hola@lumiereesthetics.co">hola@lumiereesthetics.co</a></div>
         </div>
         <div class="hours-card">
-          <h4>Business Hours</h4>
-          <div class="hours-row"><span>Monday – Friday</span><span>9:00 AM – 6:00 PM</span></div>
-          <div class="hours-row"><span>Saturday</span><span>9:00 AM – 3:00 PM</span></div>
-          <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+          <h4 data-es="Horario de Atención" data-en="Business Hours">Horario de Atención</h4>
+          <div class="hours-row"><span data-es="Lunes – Viernes" data-en="Monday – Friday">Lunes – Viernes</span><span>9:00 AM – 6:00 PM</span></div>
+          <div class="hours-row"><span data-es="Sábado" data-en="Saturday">Sábado</span><span>9:00 AM – 3:00 PM</span></div>
+          <div class="hours-row"><span data-es="Domingo" data-en="Sunday">Domingo</span><span data-es="Cerrado" data-en="Closed">Cerrado</span></div>
         </div>
       </div>
       <div class="reveal">
         <form onsubmit="event.preventDefault(); this.reset(); document.getElementById('thanks').style.display='block';">
-          <input type="text" placeholder="Full name" required>
-          <input type="email" placeholder="Email address" required>
-          <input type="tel" placeholder="Phone number">
-          <input type="text" placeholder="Service of interest">
-          <textarea rows="4" placeholder="Tell us about your appointment..."></textarea>
-          <button type="submit" class="btn btn-solid">Request Appointment</button>
-          <p id="thanks" style="display:none;color:var(--gold);font-size:.9rem">Thank you! Your request has been received.</p>
+          <input type="text" placeholder="Nombre completo" data-es-ph="Nombre completo" data-en-ph="Full name" required>
+          <input type="email" placeholder="Correo electrónico" data-es-ph="Correo electrónico" data-en-ph="Email address" required>
+          <input type="tel" placeholder="Número de teléfono" data-es-ph="Número de teléfono" data-en-ph="Phone number">
+          <input type="text" placeholder="Servicio de interés" data-es-ph="Servicio de interés" data-en-ph="Service of interest">
+          <textarea rows="4" placeholder="Cuéntanos sobre tu cita..." data-es-ph="Cuéntanos sobre tu cita..." data-en-ph="Tell us about your appointment..."></textarea>
+          <button type="submit" class="btn btn-solid" data-es="Solicitar Cita" data-en="Request Appointment">Solicitar Cita</button>
+          <p id="thanks" style="display:none;color:var(--gold);font-size:.9rem" data-es="¡Gracias! Hemos recibido tu solicitud." data-en="Thank you! Your request has been received.">¡Gracias! Hemos recibido tu solicitud.</p>
         </form>
       </div>
     </div>
@@ -375,11 +390,30 @@
         <a href="#" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
-    <p class="copy">© 2026 Lumière Esthetics by Rosmery Guzman · Luxury Beauty Studio · Cartagena, Colombia</p>
+    <p class="copy" data-es="© 2026 Lumière Esthetics by Rosmery Guzmán · Estudio de Belleza de Lujo · Cartagena, Colombia" data-en="© 2026 Lumière Esthetics by Rosmery Guzmán · Luxury Beauty Studio · Cartagena, Colombia">© 2026 Lumière Esthetics by Rosmery Guzmán · Estudio de Belleza de Lujo · Cartagena, Colombia</p>
   </div>
 </footer>
 
 <script>
+  // ----- Language toggle (defaults to Spanish) -----
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-'+lang+']').forEach(function(el){
+      el.innerHTML = el.getAttribute('data-'+lang);
+    });
+    document.querySelectorAll('[data-'+lang+'-ph]').forEach(function(el){
+      el.placeholder = el.getAttribute('data-'+lang+'-ph');
+    });
+    var es=document.getElementById('btn-es'), en=document.getElementById('btn-en');
+    es.classList.toggle('active', lang==='es');
+    en.classList.toggle('active', lang==='en');
+    try{ localStorage.setItem('lumiere-lang', lang); }catch(e){}
+  }
+  var saved='es';
+  try{ saved = localStorage.getItem('lumiere-lang') || 'es'; }catch(e){}
+  setLang(saved);
+
+  // ----- Header + menu + reveal -----
   const header=document.getElementById('header');
   window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>40));
   const burger=document.getElementById('burger'),menu=document.getElementById('menu');
