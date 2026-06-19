@@ -3,168 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lumière Esthetics by Rosmery | Estudio de Pestañas y Cejas · Cartagena</title>
-<meta name="description" content="Lumière Esthetics by Rosmery — estudio de belleza de lujo en Cartagena, Colombia. Lifting de pestañas, laminado de cejas, cejas efecto polvo, diseño y tinte.">
+<title>Rose Beauty Studio | Estudio de Pestañas y Cejas · Cartagena</title>
+<meta name="description" content="Rose Beauty Studio by Rosmery — estudio de belleza en Cartagena, Colombia. Lifting de pestañas, laminado de cejas, cejas efecto polvo, diseño y tinte.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --black:#0d0d0d;
-    --ink:#161616;
-    --panel:#1c1b19;
-    --gold:#c9a14a;
-    --gold-light:#e6cf94;
-    --cream:#f6f1e7;
-    --muted:#b9b4ab;
-    --line:rgba(201,161,74,.28);
+    --bg:#f5e7e1;
+    --bg-alt:#eedbd3;
+    --panel:#fffaf7;
+    --rosegold:#bd8169;
+    --rosegold-light:#d8a98e;
+    --rose-deep:#9c5f63;
+    --ink:#4a3736;
+    --muted:#8a6f69;
+    --line:rgba(189,129,105,.32);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
-    background:var(--black);
-    color:var(--cream);
+    background:var(--bg);
+    color:var(--ink);
     font-family:'Jost',sans-serif;
     font-weight:300;
     line-height:1.7;
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
-  h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1}
+  h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1;color:var(--ink)}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
   .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
   .eyebrow{
     font-family:'Jost',sans-serif;font-weight:500;font-size:.72rem;
-    letter-spacing:.34em;text-transform:uppercase;color:var(--gold);
+    letter-spacing:.34em;text-transform:uppercase;color:var(--rosegold);
   }
   .btn{
     display:inline-block;font-family:'Jost',sans-serif;font-weight:500;
     font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;
-    padding:16px 34px;border:1px solid var(--gold);color:var(--gold);
+    padding:16px 34px;border:1px solid var(--rosegold);color:var(--rosegold);
     background:transparent;transition:.35s;cursor:pointer;
   }
-  .btn:hover{background:var(--gold);color:var(--black)}
-  .btn-solid{background:var(--gold);color:var(--black);border-color:var(--gold)}
-  .btn-solid:hover{background:var(--gold-light);border-color:var(--gold-light)}
+  .btn:hover{background:var(--rosegold);color:#fff}
+  .btn-solid{background:var(--rosegold);color:#fff;border-color:var(--rosegold)}
+  .btn-solid:hover{background:var(--rose-deep);border-color:var(--rose-deep)}
 
-  /* HEADER */
   header{
     position:fixed;top:0;left:0;width:100%;z-index:60;
     transition:.4s;border-bottom:1px solid transparent;
   }
-  header.scrolled{background:rgba(13,13,13,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header.scrolled{background:rgba(255,250,247,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:84px;gap:18px}
-  .brand{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.04em;color:var(--cream);white-space:nowrap}
-  .brand span{color:var(--gold)}
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo-mark{width:46px;height:46px;flex:none}
+  .logo-mark svg{width:100%;height:100%;display:block}
+  .logo-text{display:flex;flex-direction:column;justify-content:center}
+  .logo-name{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:1.7rem;color:var(--rosegold);line-height:.95}
+  .logo-sub{font-family:'Jost',sans-serif;font-size:.55rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);margin-top:4px}
   .menu{display:flex;gap:34px;align-items:center}
   .menu a{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);transition:.3s}
-  .menu a:hover{color:var(--gold)}
-  .menu .btn{padding:12px 24px;color:var(--gold)}
-  .menu .btn:hover{color:var(--black)}
+  .menu a:hover{color:var(--rosegold)}
+  .menu .btn{padding:12px 24px}
   .nav-right{display:flex;align-items:center;gap:14px}
-  .lang-toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang-toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:rgba(255,255,255,.4)}
   .lang-toggle button{
     background:transparent;border:0;color:var(--muted);cursor:pointer;
     font-family:'Jost',sans-serif;font-size:.66rem;font-weight:500;
     letter-spacing:.16em;padding:7px 13px;transition:.3s;
   }
-  .lang-toggle button.active{background:var(--gold);color:var(--black)}
+  .lang-toggle button.active{background:var(--rosegold);color:#fff}
   .burger{display:none;flex-direction:column;gap:6px;background:none;border:0;cursor:pointer}
-  .burger span{width:26px;height:1.5px;background:var(--cream);transition:.3s}
+  .burger span{width:26px;height:1.5px;background:var(--ink);transition:.3s}
 
-  /* HERO */
   .hero{
     min-height:100vh;display:flex;align-items:center;position:relative;
-    background:linear-gradient(rgba(10,10,10,.55),rgba(10,10,10,.75)),
+    background:linear-gradient(to right, rgba(245,231,225,.96) 0%, rgba(245,231,225,.72) 52%, rgba(238,219,211,.5) 100%),
       url('https://images.pexels.com/photos/256380/pexels-photo-256380.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover fixed;
   }
   .hero-inner{padding:140px 0 90px;max-width:720px}
-  .hero h1{font-size:clamp(3rem,8vw,6.2rem);margin:.2em 0 .15em;letter-spacing:.01em}
-  .hero h1 em{font-style:italic;color:var(--gold-light)}
+  .hero h1{font-size:clamp(3rem,8vw,6rem);margin:.2em 0 .15em;letter-spacing:.01em}
+  .hero h1 em{font-style:italic;color:var(--rosegold)}
   .hero .sub{font-size:1.05rem;color:var(--muted);max-width:520px;margin-bottom:38px}
   .hero-actions{display:flex;gap:16px;flex-wrap:wrap}
 
-  /* SECTION */
   section{padding:110px 0}
   .section-head{max-width:680px;margin-bottom:64px}
   .section-head h2{font-size:clamp(2.2rem,5vw,3.4rem);margin:.18em 0 .3em}
   .section-head p{color:var(--muted)}
   .center{text-align:center;margin-left:auto;margin-right:auto}
 
-  /* ABOUT */
-  .about{background:var(--ink)}
+  .about{background:var(--bg-alt)}
   .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-  .about-img{position:relative;background:linear-gradient(135deg,#26221a,#3a2f1a 55%,#c9a14a)}
-  .about-img img{width:100%;height:560px;object-fit:cover;filter:grayscale(.15)}
-  .about-img::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--gold);z-index:-1}
+  .about-img{position:relative;background:linear-gradient(135deg,#e8c8b9,#cf9a86 55%,#b87a6a)}
+  .about-img img{width:100%;height:560px;object-fit:cover}
+  .about-img::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--rosegold);z-index:-1}
   .about-text h2{font-size:clamp(2rem,4.5vw,3rem);margin:.2em 0 .4em}
   .about-text p{color:var(--muted);margin-bottom:18px}
-  .sig{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.7rem;color:var(--gold);margin-top:14px}
+  .sig{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.7rem;color:var(--rosegold);margin-top:14px}
 
-  /* SERVICES */
-  .services{background:var(--black)}
+  .services{background:var(--bg)}
   .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
   .svc-card{
     background:var(--panel);border:1px solid var(--line);
     transition:.4s;overflow:hidden;display:flex;flex-direction:column;
+    box-shadow:0 18px 40px -28px rgba(156,95,99,.5);
   }
-  .svc-card:hover{transform:translateY(-6px);border-color:var(--gold)}
-  .svc-img{height:230px;background:linear-gradient(135deg,#26221a,#3a2f1a 55%,#b9923f);overflow:hidden}
-  .svc-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15);transition:.5s}
-  .svc-card:hover .svc-img img{transform:scale(1.05);filter:grayscale(0)}
+  .svc-card:hover{transform:translateY(-6px);border-color:var(--rosegold)}
+  .svc-img{height:230px;background:linear-gradient(135deg,#e8c8b9,#cf9a86 55%,#b87a6a);overflow:hidden}
+  .svc-img img{width:100%;height:100%;object-fit:cover;transition:.5s}
+  .svc-card:hover .svc-img img{transform:scale(1.05)}
   .svc-body{padding:30px 28px;display:flex;flex-direction:column;flex:1}
   .svc-card h3{font-size:1.5rem;margin:0 0 4px}
   .svc-card .en{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
   .svc-card p{color:var(--muted);font-size:.92rem;margin-bottom:18px}
-  .svc-card .price{margin-top:auto;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  .svc-card .price{margin-top:auto;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rosegold);font-weight:500}
 
-  /* GALLERY */
-  .gallery{background:var(--ink)}
+  .gallery{background:var(--bg-alt)}
   .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .gal-grid a{display:block;background:linear-gradient(135deg,#26221a,#3a2f1a 55%,#b9923f);position:relative}
-  .gal-grid a::before{content:"✦";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(246,241,231,.25);font-size:2rem}
-  .gal-grid img{position:relative;width:100%;height:280px;object-fit:cover;filter:grayscale(.2);transition:.5s}
-  .gal-grid img:hover{filter:grayscale(0);transform:scale(1.02)}
+  .gal-grid a{display:block;background:linear-gradient(135deg,#e8c8b9,#cf9a86 55%,#b87a6a);position:relative}
+  .gal-grid a::before{content:"✦";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:2rem}
+  .gal-grid img{position:relative;width:100%;height:280px;object-fit:cover;transition:.5s}
+  .gal-grid img:hover{transform:scale(1.03)}
 
-  /* TESTIMONIALS */
-  .testi{background:var(--black)}
+  .testi{background:var(--bg)}
   .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-  .quote{background:var(--panel);border:1px solid var(--line);padding:40px 34px}
-  .quote .stars{color:var(--gold);letter-spacing:.3em;margin-bottom:16px}
-  .quote p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;color:var(--cream);margin-bottom:20px}
-  .quote .who{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  .quote{background:var(--panel);border:1px solid var(--line);padding:40px 34px;box-shadow:0 18px 40px -30px rgba(156,95,99,.5)}
+  .quote .stars{color:var(--rosegold);letter-spacing:.3em;margin-bottom:16px}
+  .quote p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;color:var(--ink);margin-bottom:20px}
+  .quote .who{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rosegold)}
 
-  /* CTA / CONTACT */
   .contact{
-    background:linear-gradient(rgba(10,10,10,.82),rgba(10,10,10,.9)),
+    background:linear-gradient(rgba(245,231,225,.93),rgba(238,219,211,.96)),
       url('https://images.pexels.com/photos/19242406/pexels-photo-19242406.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover;
   }
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
   .info-row{display:flex;gap:16px;align-items:flex-start;margin-bottom:26px;padding-bottom:26px;border-bottom:1px solid var(--line)}
-  .info-row .lbl{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
-  .info-row .val{color:var(--cream);font-weight:400}
-  .info-row a.val:hover{color:var(--gold)}
+  .info-row .lbl{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--rosegold);margin-bottom:4px}
+  .info-row .val{color:var(--ink);font-weight:400}
+  .info-row a.val:hover{color:var(--rosegold)}
   form{display:grid;gap:16px}
   input,textarea{
-    width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);
-    color:var(--cream);font-family:'Jost',sans-serif;font-size:.95rem;
+    width:100%;background:rgba(255,255,255,.72);border:1px solid var(--line);
+    color:var(--ink);font-family:'Jost',sans-serif;font-size:.95rem;
     padding:15px 18px;transition:.3s;
   }
-  input:focus,textarea:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.07)}
+  input:focus,textarea:focus{outline:none;border-color:var(--rosegold);background:#fff}
   input::placeholder,textarea::placeholder{color:var(--muted)}
-  .hours-card{background:rgba(20,19,17,.7);border:1px solid var(--line);padding:30px}
-  .hours-card h4{font-size:1.5rem;margin-bottom:14px;color:var(--gold-light)}
-  .hours-row{display:flex;justify-content:space-between;color:var(--muted);font-size:.92rem;padding:7px 0;border-bottom:1px dashed rgba(201,161,74,.18)}
+  .hours-card{background:rgba(255,255,255,.7);border:1px solid var(--line);padding:30px}
+  .hours-card h4{font-size:1.5rem;margin-bottom:14px;color:var(--rosegold)}
+  .hours-row{display:flex;justify-content:space-between;color:var(--muted);font-size:.92rem;padding:7px 0;border-bottom:1px dashed rgba(189,129,105,.25)}
 
-  /* FOOTER */
-  footer{background:var(--black);border-top:1px solid var(--line);padding:60px 0 30px}
+  footer{background:var(--bg-alt);border-top:1px solid var(--line);padding:60px 0 30px}
   .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;align-items:center}
-  .foot-grid .brand{font-size:1.7rem}
+  .foot-grid .logo-name{font-size:2rem}
   .socials{display:flex;gap:22px}
   .socials a{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);transition:.3s}
-  .socials a:hover{color:var(--gold)}
-  .copy{text-align:center;color:var(--muted);font-size:.78rem;letter-spacing:.12em;margin-top:40px;padding-top:24px;border-top:1px solid rgba(201,161,74,.14)}
+  .socials a:hover{color:var(--rosegold)}
+  .copy{text-align:center;color:var(--muted);font-size:.78rem;letter-spacing:.12em;margin-top:40px;padding-top:24px;border-top:1px solid rgba(189,129,105,.22)}
 
   .reveal{opacity:0;transform:translateY(28px);transition:.9s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
@@ -178,7 +174,7 @@
   }
   @media(max-width:640px){
     .menu{
-      position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--ink);
+      position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--panel);
       flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);
       transition:.4s;border-left:1px solid var(--line);z-index:65;
     }
@@ -187,15 +183,57 @@
     .svc-grid,.testi-grid{grid-template-columns:1fr}
     section{padding:80px 0}
     .hero-actions .btn{flex:1;text-align:center}
-    .brand{font-size:1.25rem}
+    .logo-name{font-size:1.45rem}
   }
 </style>
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="rg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#efcebd"/>
+      <stop offset=".5" stop-color="#cd9079"/>
+      <stop offset="1" stop-color="#a96a66"/>
+    </linearGradient>
+    <symbol id="rose-mark" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="55" fill="none" stroke="url(#rg)" stroke-width="2"/>
+      <circle cx="60" cy="60" r="50" fill="none" stroke="url(#rg)" stroke-width="1"/>
+      <circle cx="60" cy="6.5" r="2.6" fill="#cf7fa3"/>
+      <circle cx="113.5" cy="60" r="2.6" fill="#cf7fa3"/>
+      <circle cx="60" cy="113.5" r="2.6" fill="#cf7fa3"/>
+      <circle cx="6.5" cy="60" r="2.6" fill="#cf7fa3"/>
+      <g stroke="#9c5f63" stroke-width=".7" stroke-linejoin="round">
+        <g fill="url(#rg)">
+          <path d="M60 60 C 49 52, 51 32, 60 27 C 69 32, 71 52, 60 60 Z" transform="rotate(0 60 60)"/>
+          <path d="M60 60 C 49 52, 51 32, 60 27 C 69 32, 71 52, 60 60 Z" transform="rotate(72 60 60)"/>
+          <path d="M60 60 C 49 52, 51 32, 60 27 C 69 32, 71 52, 60 60 Z" transform="rotate(144 60 60)"/>
+          <path d="M60 60 C 49 52, 51 32, 60 27 C 69 32, 71 52, 60 60 Z" transform="rotate(216 60 60)"/>
+          <path d="M60 60 C 49 52, 51 32, 60 27 C 69 32, 71 52, 60 60 Z" transform="rotate(288 60 60)"/>
+        </g>
+        <g fill="#ecc7b3">
+          <path d="M60 60 C 53 55, 54 44, 60 41 C 66 44, 67 55, 60 60 Z" transform="rotate(36 60 60)"/>
+          <path d="M60 60 C 53 55, 54 44, 60 41 C 66 44, 67 55, 60 60 Z" transform="rotate(108 60 60)"/>
+          <path d="M60 60 C 53 55, 54 44, 60 41 C 66 44, 67 55, 60 60 Z" transform="rotate(180 60 60)"/>
+          <path d="M60 60 C 53 55, 54 44, 60 41 C 66 44, 67 55, 60 60 Z" transform="rotate(252 60 60)"/>
+          <path d="M60 60 C 53 55, 54 44, 60 41 C 66 44, 67 55, 60 60 Z" transform="rotate(324 60 60)"/>
+        </g>
+      </g>
+      <circle cx="60" cy="60" r="4.2" fill="#a96a66"/>
+      <circle cx="60" cy="60" r="1.6" fill="#efcebd"/>
+    </symbol>
+  </defs>
+</svg>
+
 <header id="header">
   <div class="wrap nav">
-    <a href="#home" class="brand">Lumière <span>Esthetics</span></a>
+    <a href="#home" class="brand" aria-label="Rose Beauty Studio">
+      <span class="logo-mark"><svg><use href="#rose-mark"/></svg></span>
+      <span class="logo-text">
+        <span class="logo-name">Rose</span>
+        <span class="logo-sub" data-es="Estudio de Belleza" data-en="Beauty Studio">Estudio de Belleza</span>
+      </span>
+    </a>
     <nav class="menu" id="menu">
       <a href="#home" data-es="Inicio" data-en="Home">Inicio</a>
       <a href="#about" data-es="Nosotros" data-en="About">Nosotros</a>
@@ -214,12 +252,11 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="wrap hero-inner reveal">
-    <p class="eyebrow" data-es="Estudio de Belleza de Lujo · Cartagena, Colombia" data-en="Luxury Beauty Studio · Cartagena, Colombia">Estudio de Belleza de Lujo · Cartagena, Colombia</p>
-    <h1 data-es="Donde la belleza<br>encuentra la <em>excelencia</em>" data-en="Where beauty<br>meets <em>excellence</em>">Donde la belleza<br>encuentra la <em>excelencia</em></h1>
-    <p class="sub" data-es="Lumière Esthetics by Rosmery se dedica a crear realces de pestañas y cejas naturalmente hermosos y duraderos, para que luzcas y te sientas increíble." data-en="Lumière Esthetics by Rosmery is dedicated to crafting naturally beautiful, long-lasting lash and brow enhancements — so you look and feel your absolute best.">Lumière Esthetics by Rosmery se dedica a crear realces de pestañas y cejas naturalmente hermosos y duraderos, para que luzcas y te sientas increíble.</p>
+    <p class="eyebrow" data-es="Estudio de Belleza · Cartagena, Colombia" data-en="Beauty Studio · Cartagena, Colombia">Estudio de Belleza · Cartagena, Colombia</p>
+    <h1 data-es="Donde la belleza<br>florece con <em>amor</em>" data-en="Where beauty<br>blooms with <em>love</em>">Donde la belleza<br>florece con <em>amor</em></h1>
+    <p class="sub" data-es="Rose Beauty Studio se dedica a crear realces de pestañas y cejas naturalmente hermosos y duraderos, para que luzcas y te sientas increíble." data-en="Rose Beauty Studio is dedicated to crafting naturally beautiful, long-lasting lash and brow enhancements — so you look and feel your absolute best.">Rose Beauty Studio se dedica a crear realces de pestañas y cejas naturalmente hermosos y duraderos, para que luzcas y te sientas increíble.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn btn-solid" data-es="Reservar Cita" data-en="Book Appointment">Reservar Cita</a>
       <a href="#services" class="btn" data-es="Ver Servicios" data-en="View Services">Ver Servicios</a>
@@ -227,24 +264,22 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="about" id="about">
   <div class="wrap about-grid">
     <div class="about-img reveal">
-      <img src="https://images.pexels.com/photos/5128228/pexels-photo-5128228.jpeg?auto=compress&cs=tinysrgb&w=900&h=1120&fit=crop" alt="Rosmery Guzmán trabajando con una clienta en Lumière Esthetics">
+      <img src="https://images.pexels.com/photos/5128228/pexels-photo-5128228.jpeg?auto=compress&cs=tinysrgb&w=900&h=1120&fit=crop" alt="Rosmery Guzmán trabajando con una clienta en Rose Beauty Studio">
     </div>
     <div class="about-text reveal">
       <p class="eyebrow" data-es="Tu especialista en pestañas y cejas" data-en="Your go-to lash &amp; brow artist">Tu especialista en pestañas y cejas</p>
       <h2 data-es="Conoce a Rosmery Guzmán" data-en="Meet Rosmery Guzmán">Conoce a Rosmery Guzmán</h2>
-      <p data-es="Rosmery es la fundadora y propietaria de Lumière Esthetics, un estudio de belleza privado en el corazón de Cartagena. Esteticista certificada especializada en extensiones de pestañas, lifting de pestañas, laminado de cejas y cejas efecto polvo, aporta precisión, calidez y atención al detalle en cada cita." data-en="Rosmery is the founder and owner of Lumière Esthetics, a private beauty studio in the heart of Cartagena. A certified esthetician specializing in lash extensions, lash lifting, brow lamination and powder brows, she brings precision, warmth, and an eye for detail to every appointment.">Rosmery es la fundadora y propietaria de Lumière Esthetics, un estudio de belleza privado en el corazón de Cartagena. Esteticista certificada especializada en extensiones de pestañas, lifting de pestañas, laminado de cejas y cejas efecto polvo, aporta precisión, calidez y atención al detalle en cada cita.</p>
-      <p data-es="Comprometida con el crecimiento continuo, Rosmery asiste regularmente a capacitaciones avanzadas para mantenerse a la vanguardia de las últimas técnicas, garantizando que cada clienta reciba un servicio de la más alta calidad y los resultados más duraderos posibles." data-en="Committed to continuous growth, Rosmery regularly attends advanced trainings to stay at the forefront of the latest techniques — ensuring every client receives the highest quality service and the longest-lasting results possible.">Comprometida con el crecimiento continuo, Rosmery asiste regularmente a capacitaciones avanzadas para mantenerse a la vanguardia de las últimas técnicas, garantizando que cada clienta reciba un servicio de la más alta calidad y los resultados más duraderos posibles.</p>
+      <p data-es="Rosmery, cariñosamente conocida como Rose, es la fundadora y propietaria de Rose Beauty Studio, un estudio de belleza privado en el corazón de Cartagena. Esteticista certificada especializada en extensiones de pestañas, lifting de pestañas, laminado de cejas y cejas efecto polvo, aporta precisión, calidez y atención al detalle en cada cita." data-en="Rosmery, lovingly known as Rose, is the founder and owner of Rose Beauty Studio, a private beauty studio in the heart of Cartagena. A certified esthetician specializing in lash extensions, lash lifting, brow lamination and powder brows, she brings precision, warmth, and an eye for detail to every appointment.">Rosmery, cariñosamente conocida como Rose, es la fundadora y propietaria de Rose Beauty Studio, un estudio de belleza privado en el corazón de Cartagena. Esteticista certificada especializada en extensiones de pestañas, lifting de pestañas, laminado de cejas y cejas efecto polvo, aporta precisión, calidez y atención al detalle en cada cita.</p>
+      <p data-es="Comprometida con el crecimiento continuo, Rose asiste regularmente a capacitaciones avanzadas para mantenerse a la vanguardia de las últimas técnicas, garantizando que cada clienta reciba un servicio de la más alta calidad y los resultados más duraderos posibles." data-en="Committed to continuous growth, Rose regularly attends advanced trainings to stay at the forefront of the latest techniques — ensuring every client receives the highest quality service and the longest-lasting results possible.">Comprometida con el crecimiento continuo, Rose asiste regularmente a capacitaciones avanzadas para mantenerse a la vanguardia de las últimas técnicas, garantizando que cada clienta reciba un servicio de la más alta calidad y los resultados más duraderos posibles.</p>
       <p data-es="Le apasiona conectar con sus clientas y ayudarlas a sentirse hermosas por dentro y por fuera." data-en="She is passionate about connecting with her clients and helping them feel beautiful inside and out.">Le apasiona conectar con sus clientas y ayudarlas a sentirse hermosas por dentro y por fuera.</p>
-      <div class="sig">— Rosmery Guzmán</div>
+      <div class="sig">— Rosmery “Rose” Guzmán</div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="services" id="services">
   <div class="wrap">
     <div class="section-head center reveal">
@@ -302,7 +337,6 @@
   </div>
 </section>
 
-<!-- GALLERY -->
 <section class="gallery" id="gallery">
   <div class="wrap">
     <div class="section-head center reveal">
@@ -323,7 +357,6 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section class="testi" id="reviews">
   <div class="wrap">
     <div class="section-head center reveal">
@@ -331,20 +364,19 @@
       <h2 data-es="Lo que dicen nuestras clientas" data-en="What clients are saying">Lo que dicen nuestras clientas</h2>
     </div>
     <div class="testi-grid">
-      <div class="quote reveal"><div class="stars">★★★★★</div><p data-es="“Rosmery es muy talentosa y detallista. ¡Mis pestañas nunca se han visto mejor ni han durado tanto!”" data-en="“Rosmery is so talented and detail-oriented. My lashes have never looked better and lasted longer!”">“Rosmery es muy talentosa y detallista. ¡Mis pestañas nunca se han visto mejor ni han durado tanto!”</p><div class="who">— Daniela M.</div></div>
+      <div class="quote reveal"><div class="stars">★★★★★</div><p data-es="“Rose es muy talentosa y detallista. ¡Mis pestañas nunca se han visto mejor ni han durado tanto!”" data-en="“Rose is so talented and detail-oriented. My lashes have never looked better and lasted longer!”">“Rose es muy talentosa y detallista. ¡Mis pestañas nunca se han visto mejor ni han durado tanto!”</p><div class="who">— Daniela M.</div></div>
       <div class="quote reveal"><div class="stars">★★★★★</div><p data-es="“El estudio es precioso y muy relajante. Mis cejas quedaron perfectas — no iré a ningún otro lugar.”" data-en="“The studio is gorgeous and so relaxing. My brows are absolutely perfect — I won’t go anywhere else.”">“El estudio es precioso y muy relajante. Mis cejas quedaron perfectas — no iré a ningún otro lugar.”</p><div class="who">— Valentina R.</div></div>
       <div class="quote reveal"><div class="stars">★★★★★</div><p data-es="“Profesional, cálida y muy hábil. Siempre salgo sintiéndome hermosa y segura. ¡Muy recomendada!”" data-en="“Professional, warm and so skilled. I always leave feeling beautiful and confident. Highly recommend!”">“Profesional, cálida y muy hábil. Siempre salgo sintiéndome hermosa y segura. ¡Muy recomendada!”</p><div class="who">— Carolina S.</div></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="section-head center reveal">
       <p class="eyebrow" data-es="Contáctanos" data-en="Get in touch">Contáctanos</p>
       <h2 data-es="Reserva tu Cita" data-en="Book Your Appointment">Reserva tu Cita</h2>
-      <p data-es="Solo con cita previa. Envía una solicitud y Rosmery se pondrá en contacto para confirmar tu horario." data-en="By appointment only. Send a request below and Rosmery will be in touch to confirm your time.">Solo con cita previa. Envía una solicitud y Rosmery se pondrá en contacto para confirmar tu horario.</p>
+      <p data-es="Solo con cita previa. Envía una solicitud y Rose se pondrá en contacto para confirmar tu horario." data-en="By appointment only. Send a request below and Rose will be in touch to confirm your time.">Solo con cita previa. Envía una solicitud y Rose se pondrá en contacto para confirmar tu horario.</p>
     </div>
     <div class="contact-grid">
       <div class="reveal">
@@ -355,7 +387,7 @@
           <div><div class="lbl" data-es="Llama o Escribe" data-en="Call or Text">Llama o Escribe</div><a class="val" href="tel:+57">+57 (xxx) xxx-xxxx</a></div>
         </div>
         <div class="info-row">
-          <div><div class="lbl" data-es="Correo" data-en="Email">Correo</div><a class="val" href="mailto:hola@lumiereesthetics.co">hola@lumiereesthetics.co</a></div>
+          <div><div class="lbl" data-es="Correo" data-en="Email">Correo</div><a class="val" href="mailto:hola@rosebeautystudio.co">hola@rosebeautystudio.co</a></div>
         </div>
         <div class="hours-card">
           <h4 data-es="Horario de Atención" data-en="Business Hours">Horario de Atención</h4>
@@ -372,30 +404,34 @@
           <input type="text" placeholder="Servicio de interés" data-es-ph="Servicio de interés" data-en-ph="Service of interest">
           <textarea rows="4" placeholder="Cuéntanos sobre tu cita..." data-es-ph="Cuéntanos sobre tu cita..." data-en-ph="Tell us about your appointment..."></textarea>
           <button type="submit" class="btn btn-solid" data-es="Solicitar Cita" data-en="Request Appointment">Solicitar Cita</button>
-          <p id="thanks" style="display:none;color:var(--gold);font-size:.9rem" data-es="¡Gracias! Hemos recibido tu solicitud." data-en="Thank you! Your request has been received.">¡Gracias! Hemos recibido tu solicitud.</p>
+          <p id="thanks" style="display:none;color:var(--rosegold);font-size:.9rem" data-es="¡Gracias! Hemos recibido tu solicitud." data-en="Thank you! Your request has been received.">¡Gracias! Hemos recibido tu solicitud.</p>
         </form>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
-      <a href="#home" class="brand">Lumière <span>Esthetics</span></a>
+      <a href="#home" class="brand">
+        <span class="logo-mark"><svg><use href="#rose-mark"/></svg></span>
+        <span class="logo-text">
+          <span class="logo-name">Rose</span>
+          <span class="logo-sub" data-es="Estudio de Belleza" data-en="Beauty Studio">Estudio de Belleza</span>
+        </span>
+      </a>
       <div class="socials">
         <a href="https://www.instagram.com/rosmerygzman_" target="_blank" rel="noopener">Instagram</a>
         <a href="#" target="_blank" rel="noopener">TikTok</a>
         <a href="#" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
-    <p class="copy" data-es="© 2026 Lumière Esthetics by Rosmery Guzmán · Estudio de Belleza de Lujo · Cartagena, Colombia" data-en="© 2026 Lumière Esthetics by Rosmery Guzmán · Luxury Beauty Studio · Cartagena, Colombia">© 2026 Lumière Esthetics by Rosmery Guzmán · Estudio de Belleza de Lujo · Cartagena, Colombia</p>
+    <p class="copy" data-es="© 2026 Rose Beauty Studio by Rosmery Guzmán · Estudio de Belleza · Cartagena, Colombia" data-en="© 2026 Rose Beauty Studio by Rosmery Guzmán · Beauty Studio · Cartagena, Colombia">© 2026 Rose Beauty Studio by Rosmery Guzmán · Estudio de Belleza · Cartagena, Colombia</p>
   </div>
 </footer>
 
 <script>
-  // ----- Language toggle (defaults to Spanish) -----
   function setLang(lang){
     document.documentElement.lang = lang;
     document.querySelectorAll('[data-'+lang+']').forEach(function(el){
@@ -407,13 +443,12 @@
     var es=document.getElementById('btn-es'), en=document.getElementById('btn-en');
     es.classList.toggle('active', lang==='es');
     en.classList.toggle('active', lang==='en');
-    try{ localStorage.setItem('lumiere-lang', lang); }catch(e){}
+    try{ localStorage.setItem('rose-lang', lang); }catch(e){}
   }
   var saved='es';
-  try{ saved = localStorage.getItem('lumiere-lang') || 'es'; }catch(e){}
+  try{ saved = localStorage.getItem('rose-lang') || 'es'; }catch(e){}
   setLang(saved);
 
-  // ----- Header + menu + reveal -----
   const header=document.getElementById('header');
   window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>40));
   const burger=document.getElementById('burger'),menu=document.getElementById('menu');
