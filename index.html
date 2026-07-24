@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rose Beauty Studio | Estudio de Pestañas y Cejas · Cartagena</title>
-<meta name="description" content="Rose Beauty Studio by Rosmery — estudio de belleza en Cartagena, Colombia. Lifting de pestañas, laminado de cejas, cejas efecto polvo, diseño y tinte.">
+<title>Extensiones de Pestañas en Cartagena | Rose Beauty Studio</title>
+<meta name="description" content="Extensiones de pestañas clásicas, híbridas y volumen ruso en Cartagena, Colombia. También lifting, laminado y diseño de cejas. Rose Beauty Studio by Rosmery Guzmán — solo con cita previa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -165,8 +165,31 @@
   .socials a:hover{color:var(--rosegold)}
   .copy{text-align:center;color:var(--muted);font-size:.78rem;letter-spacing:.12em;margin-top:40px;padding-top:24px;border-top:1px solid rgba(189,129,105,.22)}
 
+  .svc-cat{
+    font-family:'Jost',sans-serif;font-weight:500;font-size:.72rem;
+    letter-spacing:.3em;text-transform:uppercase;color:var(--rosegold);
+    margin:66px 0 26px;padding-bottom:12px;border-bottom:1px solid var(--line);
+  }
+  .svc-cat:first-of-type{margin-top:0}
+  .pricelist{background:var(--panel);border:1px solid var(--line);padding:14px 30px;box-shadow:0 18px 40px -28px rgba(156,95,99,.5)}
+  .pl-row{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:18px 0;border-bottom:1px dashed rgba(189,129,105,.25)}
+  .pl-row:last-of-type{border-bottom:0}
+  .pl-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--ink)}
+  .pl-time{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+  .pl-price{font-size:.86rem;letter-spacing:.12em;color:var(--rosegold);font-weight:500;white-space:nowrap}
+  .pl-note{font-size:.86rem;color:var(--muted);font-style:italic;margin-top:18px}
+
+  .wa-float{
+    position:fixed;right:20px;bottom:20px;z-index:80;width:56px;height:56px;border-radius:50%;
+    background:var(--rosegold);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 26px -8px rgba(156,95,99,.7);transition:.3s;
+  }
+  .wa-float:hover{background:var(--rose-deep);transform:scale(1.06)}
+  .wa-float svg{width:28px;height:28px;fill:#fff}
+
   .reveal{opacity:0;transform:translateY(28px);transition:.9s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 
   @media(max-width:960px){
     .about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
@@ -253,6 +276,67 @@
       <h2 data-es="Servicios Exclusivos" data-en="Signature Services">Servicios Exclusivos</h2>
       <p data-es="Realces de pestañas y cejas personalizados, diseñados para resaltar tus facciones naturales — solo con cita previa." data-en="Customized lash and brow enhancements designed to flatter your natural features — by appointment only.">Realces de pestañas y cejas personalizados, diseñados para resaltar tus facciones naturales — solo con cita previa.</p>
     </div>
+    <h3 class="svc-cat reveal" data-es="Extensiones de pestañas" data-en="Lash extensions">Extensiones de pestañas</h3>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <!-- REPLACE: foto real de un set clásico -->
+        <div class="svc-img"><img src="https://images.pexels.com/photos/5128220/pexels-photo-5128220.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Extensiones de pestañas clásicas pelo a pelo"></div>
+        <div class="svc-body">
+          <h3 data-es="Clásicas · pelo a pelo" data-en="Classic · One by One">Clásicas · pelo a pelo</h3>
+          <div class="en" data-es="Classic Lash Extensions · 2 h" data-en="Extensiones clásicas · 2 h">Classic Lash Extensions · 2 h</div>
+          <p data-es="Una extensión por cada pestaña natural. Definición sutil y un efecto natural que realza tu mirada sin recargarla." data-en="One extension per natural lash. Subtle definition and a natural effect that enhances your eyes without overwhelming them.">Una extensión por cada pestaña natural. Definición sutil y un efecto natural que realza tu mirada sin recargarla.</p>
+          <span class="price">$120.000 COP</span>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <!-- REPLACE: foto real de un set híbrido -->
+        <div class="svc-img"><img src="https://images.pexels.com/photos/19348316/pexels-photo-19348316.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Extensiones de pestañas híbridas"></div>
+        <div class="svc-body">
+          <h3 data-es="Híbridas" data-en="Hybrid">Híbridas</h3>
+          <div class="en" data-es="Hybrid Lash Extensions · 2.5 h" data-en="Extensiones híbridas · 2.5 h">Hybrid Lash Extensions · 2.5 h</div>
+          <p data-es="Mezcla de técnica clásica y volumen. Más densidad y textura sin perder naturalidad — el punto medio perfecto." data-en="A mix of classic and volume technique. More density and texture without losing the natural look — the perfect middle ground.">Mezcla de técnica clásica y volumen. Más densidad y textura sin perder naturalidad — el punto medio perfecto.</p>
+          <span class="price">$150.000 COP</span>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <!-- REPLACE: foto real de un set de volumen ruso -->
+        <div class="svc-img"><img src="https://images.pexels.com/photos/20593111/pexels-photo-20593111.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Extensiones de pestañas volumen ruso"></div>
+        <div class="svc-body">
+          <h3 data-es="Volumen ruso" data-en="Russian Volume">Volumen ruso</h3>
+          <div class="en" data-es="Russian Volume · 3 h" data-en="Volumen ruso · 3 h">Russian Volume · 3 h</div>
+          <p data-es="Abanicos ligeros hechos a mano, uno por uno. Máxima densidad y un efecto dramático que dura semanas." data-en="Lightweight fans made by hand, one at a time. Maximum density and a dramatic effect that lasts for weeks.">Abanicos ligeros hechos a mano, uno por uno. Máxima densidad y un efecto dramático que dura semanas.</p>
+          <span class="price">$170.000 COP</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="svc-cat reveal" data-es="Retoques y mantenimiento" data-en="Refills &amp; maintenance">Retoques y mantenimiento</h3>
+    <div class="pricelist reveal">
+      <div class="pl-row">
+        <div>
+          <div class="pl-name" data-es="Retoque · hasta 2 semanas" data-en="Refill · up to 2 weeks">Retoque · hasta 2 semanas</div>
+          <div class="pl-time">1 h</div>
+        </div>
+        <div class="pl-price">$70.000 COP</div>
+      </div>
+      <div class="pl-row">
+        <div>
+          <div class="pl-name" data-es="Retoque · hasta 3 semanas" data-en="Refill · up to 3 weeks">Retoque · hasta 3 semanas</div>
+          <div class="pl-time">1.5 h</div>
+        </div>
+        <div class="pl-price">$95.000 COP</div>
+      </div>
+      <div class="pl-row">
+        <div>
+          <div class="pl-name" data-es="Retiro de extensiones" data-en="Lash removal">Retiro de extensiones</div>
+          <div class="pl-time">30 min</div>
+        </div>
+        <div class="pl-price">$25.000 COP</div>
+      </div>
+      <p class="pl-note" data-es="Después de 4 semanas el servicio se cobra como set completo. Agenda tu retoque cada 2 o 3 semanas para mantener la densidad." data-en="After 4 weeks the service is charged as a full set. Book your refill every 2 to 3 weeks to keep the density.">Después de 4 semanas el servicio se cobra como set completo. Agenda tu retoque cada 2 o 3 semanas para mantener la densidad.</p>
+    </div>
+
+    <h3 class="svc-cat reveal" data-es="Pestañas y cejas" data-en="Lashes &amp; brows">Pestañas y cejas</h3>
     <div class="svc-grid">
       <div class="svc-card reveal">
         <div class="svc-img"><img src="https://images.pexels.com/photos/5128220/pexels-photo-5128220.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Lifting de pestañas y tinte"></div>
@@ -260,7 +344,7 @@
           <h3 data-es="Lifting de pestañas + tinte" data-en="Lash Lift &amp; Tint">Lifting de pestañas + tinte</h3>
           <div class="en" data-es="Lash Lift &amp; Tint" data-en="Lifting de pestañas + tinte">Lash Lift &amp; Tint</div>
           <p data-es="Un lifting y tinte natural que riza y oscurece tus propias pestañas para una mirada despierta que dura semanas." data-en="A natural lift and tint that curls and darkens your own lashes for a wide-awake look that lasts for weeks.">Un lifting y tinte natural que riza y oscurece tus propias pestañas para una mirada despierta que dura semanas.</p>
-          <span class="price">$95 – $110</span>
+          <span class="price">$90.000 COP</span>
         </div>
       </div>
       <div class="svc-card reveal">
@@ -269,7 +353,7 @@
           <h3 data-es="Laminado de cejas" data-en="Brow Lamination">Laminado de cejas</h3>
           <div class="en" data-es="Brow Lamination" data-en="Laminado de cejas">Brow Lamination</div>
           <p data-es="Alisa y fija las cejas rebeldes en una forma más llena y perfectamente peinada que se mantiene por semanas." data-en="Smooths and sets unruly brows into a fuller, perfectly groomed shape that stays put for weeks.">Alisa y fija las cejas rebeldes en una forma más llena y perfectamente peinada que se mantiene por semanas.</p>
-          <span class="price">$70 – $110</span>
+          <span class="price">$80.000 COP</span>
         </div>
       </div>
       <div class="svc-card reveal">
@@ -278,16 +362,20 @@
           <h3 data-es="Diseño / tinte de cejas" data-en="Brow Design &amp; Tint">Diseño / tinte de cejas</h3>
           <div class="en" data-es="Brow Design &amp; Tint" data-en="Diseño / tinte de cejas">Brow Design &amp; Tint</div>
           <p data-es="Diseño y tinte personalizado para definir, enmarcar y enriquecer tus cejas con un acabado equilibrado al instante." data-en="Custom shaping and tint to define, frame and enrich your brows for instant, balanced polish.">Diseño y tinte personalizado para definir, enmarcar y enriquecer tus cejas con un acabado equilibrado al instante.</p>
-          <span class="price">$30 – $55</span>
+          <span class="price">$40.000 COP</span>
         </div>
       </div>
+    </div>
+
+    <h3 class="svc-cat reveal" data-es="Semipermanente" data-en="Semi-permanent">Semipermanente</h3>
+    <div class="svc-grid">
       <div class="svc-card reveal">
         <div class="svc-img"><img src="https://images.pexels.com/photos/4121712/pexels-photo-4121712.jpeg?auto=compress&cs=tinysrgb&w=600&h=460&fit=crop" alt="Cejas efecto polvo"></div>
         <div class="svc-body">
           <h3 data-es="Cejas efecto polvo" data-en="Powder Brows">Cejas efecto polvo</h3>
           <div class="en" data-es="Powder Brows" data-en="Cejas efecto polvo">Powder Brows</div>
           <p data-es="Cejas semipermanentes suaves y sombreadas con un acabado naturalmente empolvado y bellamente difuminado." data-en="Soft, shaded semi-permanent brows with a naturally powdered, beautifully filled-in finish.">Cejas semipermanentes suaves y sombreadas con un acabado naturalmente empolvado y bellamente difuminado.</p>
-          <span class="price">$400</span>
+          <span class="price">$500.000 COP</span>
         </div>
       </div>
       <div class="svc-card reveal">
@@ -296,7 +384,7 @@
           <h3 data-es="Retoques efecto polvo" data-en="Powder Brow Touch-Ups">Retoques efecto polvo</h3>
           <div class="en" data-es="Powder Brow Touch-Ups" data-en="Retoques efecto polvo">Powder Brow Touch-Ups</div>
           <p data-es="Mantén tus cejas efecto polvo siempre frescas con un retoque periódico de color y forma." data-en="Keep your powder brows looking fresh with a periodic color and shape refresh.">Mantén tus cejas efecto polvo siempre frescas con un retoque periódico de color y forma.</p>
-          <span class="price">$150 – $300</span>
+          <span class="price">$250.000 COP</span>
         </div>
       </div>
     </div>
@@ -347,10 +435,10 @@
     <div class="contact-grid">
       <div class="reveal">
         <div class="info-row">
-          <div><div class="lbl" data-es="Ubicación del Estudio" data-en="Studio Location">Ubicación del Estudio</div><div class="val">Carrera 17 A # 54 - 23<br>Cartagena, Colombia</div></div>
+          <div><div class="lbl" data-es="WhatsApp" data-en="WhatsApp">WhatsApp</div><a class="val wa-link" href="#" data-es="Escríbenos ahora →" data-en="Message us now →">Escríbenos ahora →</a></div>
         </div>
         <div class="info-row">
-          <div><div class="lbl" data-es="Llama o Escribe" data-en="Call or Text">Llama o Escribe</div><a class="val" href="tel:+57">+57 (xxx) xxx-xxxx</a></div>
+          <div><div class="lbl" data-es="Ubicación del Estudio" data-en="Studio Location">Ubicación del Estudio</div><div class="val" data-es="Cartagena, Colombia<br><span style='color:var(--muted);font-size:.88rem'>Dirección exacta al confirmar tu cita.</span>" data-en="Cartagena, Colombia<br><span style='color:var(--muted);font-size:.88rem'>Exact address sent when your appointment is confirmed.</span>">Cartagena, Colombia<br><span style="color:var(--muted);font-size:.88rem">Dirección exacta al confirmar tu cita.</span></div></div>
         </div>
         <div class="info-row">
           <div><div class="lbl" data-es="Correo" data-en="Email">Correo</div><a class="val" href="mailto:hola@rosebeautystudio.co">hola@rosebeautystudio.co</a></div>
@@ -363,14 +451,24 @@
         </div>
       </div>
       <div class="reveal">
-        <form onsubmit="event.preventDefault(); this.reset(); document.getElementById('thanks').style.display='block';">
-          <input type="text" placeholder="Nombre completo" data-es-ph="Nombre completo" data-en-ph="Full name" required>
-          <input type="email" placeholder="Correo electrónico" data-es-ph="Correo electrónico" data-en-ph="Email address" required>
-          <input type="tel" placeholder="Número de teléfono" data-es-ph="Número de teléfono" data-en-ph="Phone number">
-          <input type="text" placeholder="Servicio de interés" data-es-ph="Servicio de interés" data-en-ph="Service of interest">
-          <textarea rows="4" placeholder="Cuéntanos sobre tu cita..." data-es-ph="Cuéntanos sobre tu cita..." data-en-ph="Tell us about your appointment..."></textarea>
-          <button type="submit" class="btn btn-solid" data-es="Solicitar Cita" data-en="Request Appointment">Solicitar Cita</button>
-          <p id="thanks" style="display:none;color:var(--rosegold);font-size:.9rem" data-es="¡Gracias! Hemos recibido tu solicitud." data-en="Thank you! Your request has been received.">¡Gracias! Hemos recibido tu solicitud.</p>
+        <form id="bookForm" onsubmit="return sendToWhatsApp(event)">
+          <input id="f-name" type="text" placeholder="Nombre completo" data-es-ph="Nombre completo" data-en-ph="Full name" required>
+          <input id="f-phone" type="tel" placeholder="Número de teléfono" data-es-ph="Número de teléfono" data-en-ph="Phone number">
+          <select id="f-service" style="width:100%;background:rgba(255,255,255,.72);border:1px solid var(--line);color:var(--ink);font-family:'Jost',sans-serif;font-size:.95rem;padding:15px 18px">
+            <option value="Clásicas · pelo a pelo — $120.000">Clásicas · pelo a pelo — $120.000</option>
+            <option value="Híbridas — $150.000">Híbridas — $150.000</option>
+            <option value="Volumen ruso — $170.000">Volumen ruso — $170.000</option>
+            <option value="Retoque hasta 2 semanas — $70.000">Retoque hasta 2 semanas — $70.000</option>
+            <option value="Retoque hasta 3 semanas — $95.000">Retoque hasta 3 semanas — $95.000</option>
+            <option value="Lifting de pestañas + tinte — $90.000">Lifting de pestañas + tinte — $90.000</option>
+            <option value="Laminado de cejas — $80.000">Laminado de cejas — $80.000</option>
+            <option value="Diseño y tinte de cejas — $40.000">Diseño y tinte de cejas — $40.000</option>
+            <option value="Cejas efecto polvo — $500.000">Cejas efecto polvo — $500.000</option>
+            <option value="No estoy segura, quiero asesoría">No estoy segura, quiero asesoría</option>
+          </select>
+          <input id="f-when" type="text" placeholder="Día y hora que prefieres" data-es-ph="Día y hora que prefieres" data-en-ph="Preferred day and time">
+          <textarea id="f-msg" rows="4" placeholder="Cuéntanos sobre tu cita..." data-es-ph="Cuéntanos sobre tu cita..." data-en-ph="Tell us about your appointment..."></textarea>
+          <button type="submit" class="btn btn-solid" data-es="Enviar por WhatsApp" data-en="Send via WhatsApp">Enviar por WhatsApp</button>
         </form>
       </div>
     </div>
@@ -388,15 +486,56 @@
       </a>
       <div class="socials">
         <a href="https://www.instagram.com/rosmerygzman_" target="_blank" rel="noopener">Instagram</a>
-        <a href="#" target="_blank" rel="noopener">TikTok</a>
-        <a href="#" target="_blank" rel="noopener">Facebook</a>
+        <a class="wa-link" href="#">WhatsApp</a>
+        <!-- Agrega TikTok y Facebook aquí SOLO cuando existan las cuentas:
+        <a href="https://www.tiktok.com/@usuario" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.facebook.com/pagina" target="_blank" rel="noopener">Facebook</a> -->
       </div>
     </div>
     <p class="copy" data-es="© 2026 Rose Beauty Studio by Rosmery Guzmán · Estudio de Belleza · Cartagena, Colombia" data-en="© 2026 Rose Beauty Studio by Rosmery Guzmán · Beauty Studio · Cartagena, Colombia">© 2026 Rose Beauty Studio by Rosmery Guzmán · Estudio de Belleza · Cartagena, Colombia</p>
   </div>
 </footer>
 
+<a class="wa-float wa-link" href="#" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.2-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5v-.5c0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2c-1.6 0-3.2-.4-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2"/></svg>
+</a>
+
 <script>
+  /* ═══════════════════════════════════════════════════════════
+     CONFIGURA AQUÍ el número de WhatsApp de Rose.
+     Formato: código de país + número, solo dígitos, sin + ni espacios.
+     Colombia = 57.  Ejemplo: 573001234567
+     ═══════════════════════════════════════════════════════════ */
+  var WHATSAPP = "573000000000";
+
+  function waGreeting(){
+    return document.documentElement.lang === 'en'
+      ? "Hi Rose, I'd like to book an appointment."
+      : "Hola Rose, quiero agendar una cita.";
+  }
+  function refreshWaLinks(){
+    var href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(waGreeting());
+    document.querySelectorAll('.wa-link').forEach(function(a){
+      a.href = href; a.target = "_blank"; a.rel = "noopener";
+    });
+  }
+  function sendToWhatsApp(e){
+    e.preventDefault();
+    var name = document.getElementById('f-name').value.trim();
+    var phone = document.getElementById('f-phone').value.trim();
+    var svc = document.getElementById('f-service').value;
+    var when = document.getElementById('f-when').value.trim();
+    var msg = document.getElementById('f-msg').value.trim();
+    var en = document.documentElement.lang === 'en';
+    var t = (en ? "Hi Rose, I'm " : "Hola Rose, soy ") + name + ".\n"
+          + (en ? "Service: " : "Servicio: ") + svc;
+    if(when) t += "\n" + (en ? "Preferred time: " : "Prefiero: ") + when;
+    if(phone) t += "\n" + (en ? "My number: " : "Mi número: ") + phone;
+    if(msg) t += "\n" + msg;
+    window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(t), "_blank");
+    return false;
+  }
+
   function setLang(lang){
     document.documentElement.lang = lang;
     document.querySelectorAll('[data-'+lang+']').forEach(function(el){
@@ -408,6 +547,7 @@
     var es=document.getElementById('btn-es'), en=document.getElementById('btn-en');
     es.classList.toggle('active', lang==='es');
     en.classList.toggle('active', lang==='en');
+    refreshWaLinks();
     try{ localStorage.setItem('rose-lang', lang); }catch(e){}
   }
   var saved='es';
